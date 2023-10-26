@@ -10,10 +10,11 @@ const ButtonStyle = styled.button`
 
 interface Props {
   title: string;
-  onClick: () => void;
+  type?: 'button' | 'submit' | 'reset';
+  onClick?: () => void;
 }
 
-export const Button: FC<Props> = ({ title, onClick }) =>
-  <ButtonStyle onClick={onClick}>
+export const Button: FC<Props> = ({ title, type, onClick }) =>
+  <ButtonStyle type={type} onClick={onClick}>
     {title}
   </ButtonStyle>;
