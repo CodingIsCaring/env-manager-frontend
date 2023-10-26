@@ -1,4 +1,4 @@
-import {FC} from "react";
+import { FC } from 'react';
 import styled from '@emotion/styled';
 
 const ButtonStyle = styled.button`
@@ -9,11 +9,11 @@ const ButtonStyle = styled.button`
 `;
 
 interface Props {
-    title: string;
-    onClick: () => void;
+  title: string;
+  onClick: () => void;
 }
 
-export const Button: FC<Props> = ({title, onClick}) =>
-    <ButtonStyle onClick={onClick}>
-        {title}
-    </ButtonStyle>;
+export const Button: FC<Props> = ({ title, onClick }) =>
+  <ButtonStyle onClick={onClick}>
+    {title}
+  </ButtonStyle>;

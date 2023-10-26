@@ -1,5 +1,5 @@
-import {environment} from "@/api/environment/environment";
+import { environment } from '@/api/environment/environment';
 
 export const API = {
-    environment
+  environment
 };
