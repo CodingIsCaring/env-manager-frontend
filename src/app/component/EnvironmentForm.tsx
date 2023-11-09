@@ -28,7 +28,7 @@ export const EnvironmentForm: FC = () => {
   return (
     <Container>
       <form onSubmit={handleOnSubmit}>
-        <input type="text" name="name" placeholder="Name" onChange={handleOnChangeName}/>
+        <input type="text" name="name" placeholder="Name" onChange={handleOnChangeName} required={true}/>
         <input type="text" name="description" placeholder="Description"
                onChange={handleOnChangeDescription}/>
         <Button title="Create environment" type="submit"/>
