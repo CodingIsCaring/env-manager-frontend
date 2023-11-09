@@ -20,7 +20,7 @@ export const EnvironmentForm: FC = () => {
   const handleOnSubmit = () => {
     const request = {
       name,
-      description
+      description: description || undefined
     };
     API.environment.create(request).then(() => console.log(name,'environment created'));
   };
