@@ -14,7 +14,11 @@ interface Props {
   onClick?: () => void;
 }
 
-export const Button: FC<Props> = ({ title, type, onClick }) =>
+export const Button: FC<Props> = ({
+  title,
+  type = 'submit',
+  onClick
+}) =>
   <ButtonStyle type={type} onClick={onClick}>
     {title}
   </ButtonStyle>;

@@ -1,7 +1,7 @@
 import { FC, FormEvent, useState } from 'react';
 import { API } from '@/api/API';
 import styled from '@emotion/styled';
-import { Button } from '@/app/component/Button';
+import { Button } from '@/app/component/button/Button';
 
 const Container = styled.div`
   background-color: aliceblue;
