@@ -7,9 +7,15 @@ const Container = styled.div`
   background-color: aliceblue;
 `;
 
+const H1 = styled.h1`
+  color: green;
+  font-size: 50px;
+`;
+
 export const EnvironmentForm: FC = () => {
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
+  const [isCreated, setIsCreated] = useState(false);
 
   const handleOnChangeName = (event: FormEvent<HTMLInputElement>) =>
     setName(event.currentTarget.value);
@@ -22,7 +28,13 @@ export const EnvironmentForm: FC = () => {
       name,
       description: description || undefined
     };
-    API.environment.create(request).then(() => console.log(name,'environment created'));
+    console.log('Request:', request);
+    API.environment.create(request)
+      .then(() => {
+        setIsCreated(true);
+        console.log('isCreated:', isCreated);
+        console.log('Environment created successfully');
+      });
   };
 
   return (
@@ -32,6 +44,7 @@ export const EnvironmentForm: FC = () => {
         <input type="text" name="description" placeholder="Description"
                onChange={handleOnChangeDescription}/>
         <Button title="Create environment" type="submit"/>
+        {isCreated && <H1>Environment with name {name} created successfully</H1>}
       </form>
     </Container>
   );

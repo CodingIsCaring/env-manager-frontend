@@ -1,4 +1,4 @@
-const create = async (request: { name: string, description?: string }) => {
+const create = async (request: { name: string, description?: string }): Promise<void> => {
   try {
     const res = await fetch('http://localhost:8080/environments', {
       method: 'POST',
