@@ -21,8 +21,6 @@
     "typescript": "5.0.4"
   },
   "devDependencies": {
-    "@babel/preset-env": "7.23.3",
-    "@babel/preset-react": "7.23.3",
     "@cowcoders/eslint-config-ts": "1.0.2",
     "@testing-library/jest-dom": "6.1.4",
     "@testing-library/react": "14.1.0",
